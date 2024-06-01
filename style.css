@@ -51,16 +51,15 @@ li a.active {
 section{
     height: 100vh;
     width: 100%;
-    background: cadetblue;
+    background: rgb(15, 30, 31);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 section .dots span{
     position: absolute;
-    height: 30px;
-    width: 30px;
-    background: #fff;
+    height: 20px;
+    width: 45px;
     border-radius: 50%;
     transform: rotate(calc(var(--i) * (360deg / 15))) translateY(120px);
     animation: animate 1.5s linear infinite;
@@ -70,8 +69,41 @@ section .dots span{
 @keyframes animate {
     0%{
         opacity: 1;
+        background: #EE82EE;
     }
+
+    14%{
+     
+        background: #4B0082;
+    }
+
+    28%{
+      
+        background: #0000FF;
+    }
+
+    42%{
+       
+        background: #00FF00;
+    }
+
+    56%{
+       
+        background: #FFFF00;
+    }
+
+    70%{
+       
+        background: #FFA500;
+    }
+
+    84%{
+       
+        background: #FF0000;
+    }
+
     100%{
         opacity: 0;
+        background: #FF0000;
     }
 }
