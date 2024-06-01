@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Dots</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main container styles */
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(15, 30, 31);
+            position: relative;
+        }
+
+        /* Dot styles */
+        .dots span {
+            position: absolute;
+            height: 20px;
+            width: 45px;
+            border-radius: 50%;
+            opacity: 0;
+            animation: animate 1.5s linear infinite;
+        }
+
+        /* Animation keyframes */
+        @keyframes animate {
+            0% {
+                opacity: 1;
+                background: #EE82EE;
+            }
+            /* Add more keyframes as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dots">
+            <!-- Dots generated using JavaScript -->
+        </div>
+    </div>
+    <script>
+        // JavaScript to generate dots dynamically
+        const dotsContainer = document.querySelector('.dots');
+        const numDots = 15;
+
+        for (let i = 1; i <= numDots; i++) {
+            const dot = document.createElement('span');
+            dot.style.setProperty('--i', i);
+            dotsContainer.appendChild(dot);
+        }
+    </script>
+</body>
+</html>
